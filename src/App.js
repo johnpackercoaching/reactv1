@@ -22,6 +22,7 @@ function App() {
           '& .MuiDrawer-paper': {
             width: 240,
             boxSizing: 'border-box',
+            backgroundColor: 'lightSkyBlue',
           },
         }}
       >
