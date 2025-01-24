@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 
 function App() {
-  const menuItems = ['Home', 'About', 'Contactzs'];
+  const menuItems = ['Home', 'Abouts', 'Contact'];
 
   return (
     <Box sx={{ display: 'flex' }}>
