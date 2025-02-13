@@ -14,13 +14,37 @@ client = OpenAI(
 )
 
 # Use the system prompt
-SYSTEM_PROMPT = socrates_system.ACTIVE_PROMPT
+def get_system_prompt() -> str:
+    try:
+        assistant = client.beta.assistants.retrieve(
+            assistant_id=os.getenv('OPENAI_ASSISTANT_ID')
+        )
+        # First handle None case
+        if assistant.instructions is None:
+            return socrates_system.ACTIVE_PROMPT
+            
+        # Force convert to string, no matter what type we get
+        return str(assistant.instructions)
+            
+    except Exception as e:
+        print(f"Error getting system prompt: {str(e)}")
+        return socrates_system.ACTIVE_PROMPT
+
+def update_system_prompt(new_prompt: str) -> None:
+    try:
+        # Update the OpenAI Assistant
+        client.beta.assistants.update(
+            assistant_id=os.getenv('OPENAI_ASSISTANT_ID'),
+            instructions=new_prompt
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 # Use the knowledge base
 documents = knowledge_base.DOCUMENTS
 
 # Add model management
-CURRENT_MODEL = "gpt-4"
+CURRENT_MODEL = "gpt-4o"
 
 def get_model() -> str:
     return CURRENT_MODEL
@@ -34,7 +58,7 @@ async def ask_question(question: str) -> Dict[str, Any]:
         completion = client.chat.completions.create(
             model=CURRENT_MODEL,  # Use the selected model
             messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "system", "content": get_system_prompt()},
                 {"role": "user", "content": question}
             ]
         )
@@ -50,14 +74,4 @@ async def create_embeddings(documents: List[str]) -> Dict[str, Any]:
         )
         return {"embeddings": embeddings}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-# Add these functions to manage the system prompt
-def get_system_prompt() -> str:
-    # Return the current system prompt
-    return SYSTEM_PROMPT
-
-def update_system_prompt(new_prompt: str) -> None:
-    # Update the system prompt
-    global SYSTEM_PROMPT
-    SYSTEM_PROMPT = new_prompt 
+        raise HTTPException(status_code=500, detail=str(e)) 

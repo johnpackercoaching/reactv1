@@ -19,17 +19,10 @@ const ResourcesPage = () => (
 );
 
 const SettingsPage = () => {
-  const [systemPrompt, setSystemPrompt] = useState('');
-  const [model, setModel] = useState('gpt-4');
-  const [isEditing, setIsEditing] = useState(false);
-  const [isSaving, setIsSaving] = useState(false);
-  const [error, setError] = useState('');
-  const [openSection, setOpenSection] = useState('');
-
-  const models = [
-    { id: 'gpt-4', name: 'GPT-4' },
-    { id: 'gpt-3.5-turbo', name: 'GPT-3.5 Turbo' },
-  ];
+  const [settings, setSettings] = useState({
+    systemPrompt: '',
+    model: ''
+  });
 
   useEffect(() => {
     // Fetch current settings
@@ -41,142 +34,42 @@ const SettingsPage = () => {
         ]);
         const promptData = await promptResponse.json();
         const modelData = await modelResponse.json();
-        setSystemPrompt(promptData.prompt);
-        setModel(modelData.model);
+        setSettings({
+          systemPrompt: promptData.prompt,
+          model: modelData.model
+        });
       } catch (err) {
-        setError('Failed to load settings');
+        console.error('Failed to load settings');
       }
     };
     fetchSettings();
   }, []);
 
-  const handleSavePrompt = async () => {
-    setIsSaving(true);
-    setError('');
-    try {
-      const response = await fetch(`${API_URL}/api/system-prompt`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt: systemPrompt })
-      });
-      if (!response.ok) throw new Error('Failed to save');
-      setIsEditing(false);
-    } catch (err) {
-      setError('Failed to save system prompt');
-    } finally {
-      setIsSaving(false);
-    }
-  };
-
-  const handleModelChange = async (newModel) => {
-    try {
-      const response = await fetch(`${API_URL}/api/model`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ model: newModel })
-      });
-      if (!response.ok) throw new Error('Failed to update model');
-      setModel(newModel);
-    } catch (err) {
-      setError('Failed to update model');
-    }
-  };
-
-  const AccordionHeader = ({ title, section }) => (
-    <button
-      onClick={() => setOpenSection(openSection === section ? '' : section)}
-      className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 rounded-t-lg"
-    >
-      <span className="font-medium">{title}</span>
-      <span className="transform transition-transform duration-200">
-        {openSection === section ? '−' : '+'}
-      </span>
-    </button>
-  );
-
   return (
     <div className="p-6 max-w-4xl mx-auto">
-      <h2 className="text-2xl font-semibold mb-6">Settings</h2>
+      <h2 className="text-2xl font-semibold mb-6">Assistant Settings</h2>
       
-      {error && (
-        <div className="mb-4 p-3 bg-red-50 text-red-600 rounded-md">
-          {error}
-        </div>
-      )}
-
-      <div className="space-y-4">
-        {/* System Prompt Accordion */}
-        <div className="border rounded-lg">
-          <AccordionHeader title="System Prompt" section="prompt" />
-          {openSection === 'prompt' && (
-            <div className="p-4 border-t">
-              <div className="flex justify-end mb-4">
-                {!isEditing ? (
-                  <button
-                    onClick={() => setIsEditing(true)}
-                    className="px-4 py-2 text-sm bg-blue-50 text-blue-600 rounded-md hover:bg-blue-100"
-                  >
-                    Edit Prompt
-                  </button>
-                ) : (
-                  <div className="space-x-2">
-                    <button
-                      onClick={handleSavePrompt}
-                      disabled={isSaving}
-                      className="px-4 py-2 text-sm bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:opacity-50"
-                    >
-                      {isSaving ? 'Saving...' : 'Save'}
-                    </button>
-                    <button
-                      onClick={() => setIsEditing(false)}
-                      className="px-4 py-2 text-sm bg-gray-50 text-gray-600 rounded-md hover:bg-gray-100"
-                    >
-                      Cancel
-                    </button>
-                  </div>
-                )}
-              </div>
-              {isEditing ? (
-                <textarea
-                  value={systemPrompt}
-                  onChange={(e) => setSystemPrompt(e.target.value)}
-                  className="w-full h-64 p-3 border rounded-md font-mono text-sm"
-                  placeholder="Enter the system prompt..."
-                />
-              ) : (
-                <pre className="w-full h-64 p-3 bg-gray-50 rounded-md overflow-auto font-mono text-sm">
-                  {systemPrompt}
-                </pre>
-              )}
-            </div>
-          )}
+      <div className="space-y-6">
+        {/* Model Display */}
+        <div className="bg-white rounded-lg shadow overflow-hidden">
+          <div className="px-4 py-3 bg-gray-50 border-b">
+            <h3 className="text-lg font-medium text-gray-900">Current Model</h3>
+          </div>
+          <div className="p-4">
+            <p className="text-gray-800 font-mono">{settings.model}</p>
+          </div>
         </div>
 
-        {/* Model Selection Accordion */}
-        <div className="border rounded-lg">
-          <AccordionHeader title="AI Model" section="model" />
-          {openSection === 'model' && (
-            <div className="p-4 border-t">
-              <div className="space-y-2">
-                {models.map((modelOption) => (
-                  <label
-                    key={modelOption.id}
-                    className="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded-md cursor-pointer"
-                  >
-                    <input
-                      type="radio"
-                      name="model"
-                      value={modelOption.id}
-                      checked={model === modelOption.id}
-                      onChange={() => handleModelChange(modelOption.id)}
-                      className="text-blue-500 focus:ring-blue-500"
-                    />
-                    <span>{modelOption.name}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-          )}
+        {/* System Prompt Display */}
+        <div className="bg-white rounded-lg shadow overflow-hidden">
+          <div className="px-4 py-3 bg-gray-50 border-b">
+            <h3 className="text-lg font-medium text-gray-900">System Prompt</h3>
+          </div>
+          <div className="p-4">
+            <pre className="whitespace-pre-wrap font-mono text-sm text-gray-800">
+              {settings.systemPrompt}
+            </pre>
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,220 @@
+2025-02-12 22:06:30,743 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:06:30,843 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:07:29,173 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:07:29,248 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:10:49,197 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:10:49,343 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:11:14,360 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:11:14,449 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:12:04,204 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:12:04,282 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:15:19,915 - INFO - Saving Settings: Instructions length: 222
+2025-02-12 22:15:19,916 - INFO - Settings Saved: Successfully wrote to file
+2025-02-12 22:17:07,913 - INFO - Saving Settings: Instructions length: 222
+2025-02-12 22:17:07,914 - INFO - Settings Saved: Successfully wrote to file
+2025-02-12 22:17:13,061 - INFO - Saving Settings: Instructions length: 222
+2025-02-12 22:17:13,061 - INFO - Settings Saved: Successfully wrote to file
+2025-02-12 22:18:43,423 - INFO - Saving Settings: Instructions length: 4924
+2025-02-12 22:18:43,423 - INFO - Settings Saved: Successfully wrote to file
+2025-02-12 22:18:52,454 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:18:52,548 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:19:52,967 - INFO - Question Received: hello
+2025-02-12 22:19:53,178 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:19:53,179 - INFO - Error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api_key. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-02-12 22:20:36,419 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:20:36,509 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:20:53,084 - INFO - Saving Settings: Instructions length: 4916
+2025-02-12 22:20:53,086 - INFO - Settings Saved: Successfully wrote to file
+2025-02-12 22:22:36,150 - INFO - Question Received: hello
+2025-02-12 22:22:36,381 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages "HTTP/1.1 401 Unauthorized"
+2025-02-12 22:22:36,382 - INFO - Error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api_key. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-02-12 22:23:23,572 - INFO - Saving Settings: Instructions length: 4916
+2025-02-12 22:23:23,573 - INFO - Settings Saved: Successfully wrote to file
+2025-02-12 22:23:28,953 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-02-12 22:23:29,475 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-02-12 22:23:31,969 - INFO - Question Received: hello
+2025-02-12 22:23:31,970 - INFO - Using Thread: ID: thread_X9FHloZaS0me79WrqdCAXlO0
+2025-02-12 22:23:32,633 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages "HTTP/1.1 200 OK"
+2025-02-12 22:23:32,640 - INFO - Message Created: Message ID: msg_Do9gTH8d6rDrxbM26i4VC6Oz
+2025-02-12 22:23:34,903 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs "HTTP/1.1 200 OK"
+2025-02-12 22:23:34,907 - INFO - Run Created: Run ID: run_rNMfCQOUfjoY3aaYWSyxJPSP
+2025-02-12 22:23:35,131 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_rNMfCQOUfjoY3aaYWSyxJPSP "HTTP/1.1 200 OK"
+2025-02-12 22:23:36,009 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_rNMfCQOUfjoY3aaYWSyxJPSP "HTTP/1.1 200 OK"
+2025-02-12 22:23:36,717 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_rNMfCQOUfjoY3aaYWSyxJPSP "HTTP/1.1 200 OK"
+2025-02-12 22:23:37,499 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_rNMfCQOUfjoY3aaYWSyxJPSP "HTTP/1.1 200 OK"
+2025-02-12 22:23:38,386 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_rNMfCQOUfjoY3aaYWSyxJPSP "HTTP/1.1 200 OK"
+2025-02-12 22:23:39,139 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_rNMfCQOUfjoY3aaYWSyxJPSP "HTTP/1.1 200 OK"
+2025-02-12 22:23:40,022 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_rNMfCQOUfjoY3aaYWSyxJPSP "HTTP/1.1 200 OK"
+2025-02-12 22:23:40,843 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_rNMfCQOUfjoY3aaYWSyxJPSP "HTTP/1.1 200 OK"
+2025-02-12 22:23:41,033 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages?limit=1&order=desc "HTTP/1.1 200 OK"
+2025-02-12 22:23:41,037 - INFO - Response Sent: Hello! How can I assist you today?
+2025-02-12 22:23:53,462 - INFO - Question Received: what are your instructions
+2025-02-12 22:23:53,462 - INFO - Using Thread: ID: thread_X9FHloZaS0me79WrqdCAXlO0
+2025-02-12 22:23:53,820 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages "HTTP/1.1 200 OK"
+2025-02-12 22:23:53,823 - INFO - Message Created: Message ID: msg_Q2gCRKiqfL9Z1UyrOwWHizow
+2025-02-12 22:23:54,872 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs "HTTP/1.1 200 OK"
+2025-02-12 22:23:54,874 - INFO - Run Created: Run ID: run_yI6kmLRbu8QPtB6rnmnnwNMc
+2025-02-12 22:23:55,101 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_yI6kmLRbu8QPtB6rnmnnwNMc "HTTP/1.1 200 OK"
+2025-02-12 22:23:55,995 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_yI6kmLRbu8QPtB6rnmnnwNMc "HTTP/1.1 200 OK"
+2025-02-12 22:23:56,733 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_yI6kmLRbu8QPtB6rnmnnwNMc "HTTP/1.1 200 OK"
+2025-02-12 22:23:57,538 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_yI6kmLRbu8QPtB6rnmnnwNMc "HTTP/1.1 200 OK"
+2025-02-12 22:23:58,259 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_yI6kmLRbu8QPtB6rnmnnwNMc "HTTP/1.1 200 OK"
+2025-02-12 22:23:59,070 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_yI6kmLRbu8QPtB6rnmnnwNMc "HTTP/1.1 200 OK"
+2025-02-12 22:23:59,889 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_yI6kmLRbu8QPtB6rnmnnwNMc "HTTP/1.1 200 OK"
+2025-02-12 22:24:00,708 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_yI6kmLRbu8QPtB6rnmnnwNMc "HTTP/1.1 200 OK"
+2025-02-12 22:24:00,863 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages?limit=1&order=desc "HTTP/1.1 200 OK"
+2025-02-12 22:24:00,865 - INFO - Response Sent: I'm here to assist you by providing information, answering questions, and facilitating engaging discussions. My aim is to help you explore topics of interest, clarify doubts, and offer insightful perspectives. If there's anything specific you'd like to know or discuss, feel free to ask!
+2025-02-12 22:24:33,889 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-02-12 22:24:34,298 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-02-12 22:24:50,097 - INFO - Question Received: how is your day going
+2025-02-12 22:24:50,097 - INFO - Using Thread: ID: thread_X9FHloZaS0me79WrqdCAXlO0
+2025-02-12 22:24:51,704 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages "HTTP/1.1 200 OK"
+2025-02-12 22:24:51,705 - INFO - Message Created: Message ID: msg_XqngQrSSNB1g0E4AmBV2XsiC
+2025-02-12 22:24:52,833 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs "HTTP/1.1 200 OK"
+2025-02-12 22:24:52,836 - INFO - Run Created: Run ID: run_r18o0PBRBnSX1NqrlQrdnWHk
+2025-02-12 22:24:54,469 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_r18o0PBRBnSX1NqrlQrdnWHk "HTTP/1.1 200 OK"
+2025-02-12 22:24:55,241 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_r18o0PBRBnSX1NqrlQrdnWHk "HTTP/1.1 200 OK"
+2025-02-12 22:24:55,957 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_r18o0PBRBnSX1NqrlQrdnWHk "HTTP/1.1 200 OK"
+2025-02-12 22:24:56,309 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages?limit=1&order=desc "HTTP/1.1 200 OK"
+2025-02-12 22:24:56,309 - INFO - Response Sent: I'm here and ready to assist you with any questions or information you need. How can I help you today?
+2025-02-12 22:26:26,114 - INFO - Question Received: how do you conduct discovery according to partnerable
+2025-02-12 22:26:26,114 - INFO - Using Thread: ID: thread_X9FHloZaS0me79WrqdCAXlO0
+2025-02-12 22:26:26,632 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages "HTTP/1.1 200 OK"
+2025-02-12 22:26:26,636 - INFO - Message Created: Message ID: msg_mfkmflwalwhe9PG6AolcLPsa
+2025-02-12 22:26:28,169 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs "HTTP/1.1 200 OK"
+2025-02-12 22:26:28,171 - INFO - Run Created: Run ID: run_GJu82G0atH5isbxcf6WumXvm
+2025-02-12 22:26:28,478 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:29,293 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:30,034 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:30,834 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:31,651 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:32,469 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:33,190 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:34,211 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:34,933 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:35,810 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:36,695 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:37,723 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:38,612 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:39,349 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:40,677 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:41,621 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:42,366 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:43,186 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_GJu82G0atH5isbxcf6WumXvm "HTTP/1.1 200 OK"
+2025-02-12 22:26:43,354 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages?limit=1&order=desc "HTTP/1.1 200 OK"
+2025-02-12 22:26:43,356 - INFO - Response Sent: To conduct discovery according to "Partnerable," you should follow a structured process that emphasizes understanding the ecosystem of stakeholders, aligning expectations, and setting actionable steps for collaboration. Here's a detailed breakdown:
+
+### Discovery Process
+
+1. **Learn or Review the Ecosystem of Stakeholders and Influences**:
+   - **Identify Stakeholders**: Clarify the roles and decision-making powers of key participants. Map out both present and absent stakeholders they represent, and understand how each stakeholder’s priorities influence the process【189:0†Partnerable_Discovery.txt】.
+   - **Research**: Understand the client's business model, challenges, and competitors, including revenue generation and market trends impacting their business【189:0†Partnerable_Discovery.txt】.
+   - **Anticipate Pivot Points and Objections**: Prepare empathetic, solution-focused responses to potential concerns and scenarios【189:0†Partnerable_Discovery.txt】.
+
+2. **Conduct Discovery**:
+   - **Build Rapport**: Reference prior interactions and express appreciation to set a conversational tone that encourages trust【189:0†Partnerable_Discovery.txt】.
+   - **Use Open-ended Questions**: Explore goals, challenges, and key success metrics to seek clarity on desired outcomes【189:0†Partnerable_Discovery.txt】.
+   - **Summarize and Confirm Insights**: Recap discussions, validate understanding, and outline clear next steps with timelines and deliverables【189:0†Partnerable_Discovery.txt】.
+
+3. **Follow Up**:
+   - **Document**: Summarize takeaways, challenges, and proposed solutions to share with stakeholders【189:0†Partnerable_Discovery.txt】.
+   - **Send Follow-Up Communication**: Reiterate key takeaways and agree on actions, confirming timelines and the next meeting【189:0†Partnerable_Discovery.txt】.
+   - **Plan Future Interactions**: Schedule follow-up discussions to maintain momentum and address unresolved items, tracking progress and refining plans based on feedback【189:0†Partnerable_Discovery.txt】.
+
+This process helps ensure that all parties are aligned and that interests are effectively represented, facilitating more successful and collaborative outcomes【189:0†Partnerable_Discovery.txt】.
+2025-02-12 22:26:59,009 - INFO - Saving Settings: Instructions length: 4916
+2025-02-12 22:26:59,010 - INFO - Settings Saved: Successfully wrote to file
+2025-02-12 22:28:14,444 - INFO - Question Received: what is partnerable
+2025-02-12 22:28:14,444 - INFO - Using Thread: ID: thread_X9FHloZaS0me79WrqdCAXlO0
+2025-02-12 22:28:14,973 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages "HTTP/1.1 200 OK"
+2025-02-12 22:28:14,986 - INFO - Message Created: Message ID: msg_yruinSA8WOIKYhrjqJcLoJyc
+2025-02-12 22:28:16,393 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs "HTTP/1.1 200 OK"
+2025-02-12 22:28:16,394 - INFO - Error Creating Run: 'Stream' object has no attribute 'id'
+2025-02-12 22:28:16,394 - INFO - Error: 'Stream' object has no attribute 'id'
+2025-02-12 22:29:01,711 - INFO - Saving Settings: Instructions length: 4916
+2025-02-12 22:29:01,711 - INFO - Settings Saved: Successfully wrote to file
+2025-02-12 22:29:17,626 - INFO - Question Received: what is partnerable
+2025-02-12 22:29:17,626 - INFO - Using Thread: ID: thread_X9FHloZaS0me79WrqdCAXlO0
+2025-02-12 22:29:18,258 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages "HTTP/1.1 200 OK"
+2025-02-12 22:29:18,265 - INFO - Message Created: Message ID: msg_sNv4W5vzYHPS6FUVQ0XmcHhE
+2025-02-12 22:29:19,690 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs "HTTP/1.1 200 OK"
+2025-02-12 22:29:19,694 - INFO - Run Created: Run ID: run_45vce2suStvNbO38YWczPR6H
+2025-02-12 22:29:19,946 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:20,407 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:21,021 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:21,431 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:21,842 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:22,254 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:22,559 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:22,919 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:23,378 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:23,685 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:24,094 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:24,504 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:24,814 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:25,148 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:25,459 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:25,834 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:26,171 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:26,552 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:27,063 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:27,399 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:27,884 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:28,296 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:28,627 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:29,009 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_45vce2suStvNbO38YWczPR6H "HTTP/1.1 200 OK"
+2025-02-12 22:29:29,187 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages?limit=1&order=desc "HTTP/1.1 200 OK"
+2025-02-12 22:30:27,617 - INFO - Saving Settings: Instructions length: 4916
+2025-02-12 22:30:27,618 - INFO - Settings Saved: Successfully wrote to file
+2025-02-12 22:30:38,223 - INFO - Question Received: what is partnerable
+2025-02-12 22:30:38,223 - INFO - Using Thread: ID: thread_X9FHloZaS0me79WrqdCAXlO0
+2025-02-12 22:30:39,068 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages "HTTP/1.1 200 OK"
+2025-02-12 22:30:39,076 - INFO - Message Created: Message ID: msg_XR0b6mCTS0Z9gdxq33gpimM8
+2025-02-12 22:30:40,797 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs "HTTP/1.1 200 OK"
+2025-02-12 22:30:40,808 - INFO - Run Created: Run ID: run_hDTRXrgOQ4DTuxIHE0bpDdkj
+2025-02-12 22:30:41,101 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_hDTRXrgOQ4DTuxIHE0bpDdkj "HTTP/1.1 200 OK"
+2025-02-12 22:30:42,380 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_hDTRXrgOQ4DTuxIHE0bpDdkj "HTTP/1.1 200 OK"
+2025-02-12 22:30:44,172 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_hDTRXrgOQ4DTuxIHE0bpDdkj "HTTP/1.1 200 OK"
+2025-02-12 22:30:46,784 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_hDTRXrgOQ4DTuxIHE0bpDdkj "HTTP/1.1 200 OK"
+2025-02-12 22:30:47,064 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages?limit=1&order=desc "HTTP/1.1 200 OK"
+2025-02-12 22:31:53,012 - INFO - Question Received: what is partnerable
+2025-02-12 22:31:53,013 - INFO - Using Thread: ID: thread_X9FHloZaS0me79WrqdCAXlO0
+2025-02-12 22:31:53,434 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages "HTTP/1.1 200 OK"
+2025-02-12 22:31:53,435 - INFO - Message Created: Message ID: msg_6yVtfIhMq1xWQsoApZuOvZWE
+2025-02-12 22:31:54,728 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs "HTTP/1.1 200 OK"
+2025-02-12 22:31:54,730 - INFO - Run Created: Run ID: run_fW5oSEiFKrVIMVITDOeOxWXK
+2025-02-12 22:31:55,343 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_fW5oSEiFKrVIMVITDOeOxWXK "HTTP/1.1 200 OK"
+2025-02-12 22:31:56,880 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_fW5oSEiFKrVIMVITDOeOxWXK "HTTP/1.1 200 OK"
+2025-02-12 22:31:58,931 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs/run_fW5oSEiFKrVIMVITDOeOxWXK "HTTP/1.1 200 OK"
+2025-02-12 22:31:59,165 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages?limit=1&order=desc "HTTP/1.1 200 OK"
+2025-02-12 22:32:09,413 - INFO - Saving Settings: Instructions length: 4916
+2025-02-12 22:32:09,414 - INFO - Settings Saved: Successfully wrote to file
+2025-02-12 22:32:28,275 - INFO - Question Received: hello
+2025-02-12 22:32:28,275 - INFO - Using Thread: ID: thread_X9FHloZaS0me79WrqdCAXlO0
+2025-02-12 22:32:28,684 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages "HTTP/1.1 200 OK"
+2025-02-12 22:32:28,691 - INFO - Message Created: Message ID: msg_RDaXOjxQMdhN6xu2XZHWZCwa
+2025-02-12 22:32:29,778 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs "HTTP/1.1 200 OK"
+2025-02-12 22:32:29,818 - INFO - Run Created: Run ID: run_Ia4EMKXSoh8WqEZaEgI8FWST
+2025-02-12 22:32:56,963 - INFO - Question Received: is it later? 
+2025-02-12 22:32:56,964 - INFO - Using Thread: ID: thread_X9FHloZaS0me79WrqdCAXlO0
+2025-02-12 22:32:57,535 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages "HTTP/1.1 200 OK"
+2025-02-12 22:32:57,536 - INFO - Message Created: Message ID: msg_v4lGm1scnny78rzgjwq42q0r
+2025-02-12 22:32:59,350 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs "HTTP/1.1 200 OK"
+2025-02-12 22:32:59,351 - INFO - Run Created: Run ID: run_T65F892Tpd2VFth9Adhn0g5C
+2025-02-12 22:33:49,314 - INFO - Saving Settings: Instructions length: 4916
+2025-02-12 22:33:49,315 - INFO - Settings Saved: Successfully wrote to file
+2025-02-12 22:34:02,098 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-02-12 22:34:02,431 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-02-12 22:39:29,266 - INFO - Saving Settings: Instructions length: 4916
+2025-02-12 22:39:29,266 - INFO - Settings Saved: Successfully wrote to file
+2025-02-12 22:40:40,994 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-02-12 22:40:41,479 - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-02-12 22:40:49,248 - INFO - Question Received: good evening
+2025-02-12 22:40:49,249 - INFO - Using Thread: ID: thread_X9FHloZaS0me79WrqdCAXlO0
+2025-02-12 22:40:49,593 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/messages "HTTP/1.1 200 OK"
+2025-02-12 22:40:49,596 - INFO - Message Created: Message ID: msg_LMarOveWCsPSaB6VApEIuQgs
+2025-02-12 22:40:50,911 - INFO - HTTP Request: POST https://api.openai.com/v1/threads/thread_X9FHloZaS0me79WrqdCAXlO0/runs "HTTP/1.1 200 OK"
+2025-02-12 22:40:50,911 - INFO - Run Created: Streaming started
+2025-02-12 22:40:53,617 - INFO - Response Complete: Total length: 41
+2025-02-12 22:41:13,085 - INFO - Saving Settings: Instructions length: 4916
+2025-02-12 22:41:13,086 - INFO - Settings Saved: Successfully wrote to file
