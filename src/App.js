@@ -1,44 +1,8 @@
 import React from 'react';
-import { 
-  Box, 
-  Drawer, 
-  List, 
-  ListItem, 
-  ListItemText,
-  CssBaseline 
-} from '@mui/material';
+import SocratesChat from './components/SocratesChat';
 
 function App() {
-  const menuItems = ['Hosme', 'About', 'Contact'];
-
-  return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <Drawer
-        variant="permanent"
-        sx={{
-          width: 240,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: 240,
-            boxSizing: 'border-box',
-            backgroundColor: 'lightSkyBlue',
-          },
-        }}
-      >
-        <List>
-          {menuItems.map((text) => (
-            <ListItem button key={text}>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        {/* Main content area - intentionally left empty */}
-      </Box>
-    </Box>
-  );
+  return <SocratesChat />;
 }
 
 export default App;
