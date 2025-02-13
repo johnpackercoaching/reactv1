@@ -63,9 +63,21 @@ async def get_system_prompt() -> Dict[str, str]:
 async def update_system_prompt(data: Dict[str, str]) -> Dict[str, str]:
     new_prompt = data.get("prompt")
     if not new_prompt:
-        raise HTTPException(status_code=400, message="Prompt is required")
+        raise HTTPException(status_code=400, detail="Prompt is required")
     ai_service.update_system_prompt(new_prompt)
     return {"message": "Prompt updated successfully"}
+
+@app.get("/api/model")
+async def get_model() -> Dict[str, str]:
+    return {"model": ai_service.get_model()}
+
+@app.post("/api/model")
+async def update_model(data: Dict[str, str]) -> Dict[str, str]:
+    new_model = data.get("model")
+    if not new_model:
+        raise HTTPException(status_code=400, detail="Model is required")
+    ai_service.update_model(new_model)
+    return {"message": "Model updated successfully"}
 
 if __name__ == "__main__":
     import uvicorn

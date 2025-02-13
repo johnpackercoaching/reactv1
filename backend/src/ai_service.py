@@ -19,10 +19,20 @@ SYSTEM_PROMPT = socrates_system.ACTIVE_PROMPT
 # Use the knowledge base
 documents = knowledge_base.DOCUMENTS
 
+# Add model management
+CURRENT_MODEL = "gpt-4"
+
+def get_model() -> str:
+    return CURRENT_MODEL
+
+def update_model(new_model: str) -> None:
+    global CURRENT_MODEL
+    CURRENT_MODEL = new_model
+
 async def ask_question(question: str) -> Dict[str, Any]:
     try:
         completion = client.chat.completions.create(
-            model="gpt-4",
+            model=CURRENT_MODEL,  # Use the selected model
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": question}
