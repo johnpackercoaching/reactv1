@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MessageCircle, Home, Settings, Users, Mail, ScrollText, FileText, RefreshCw } from 'lucide-react';
-import socratesImage from '../assets/author-unknown-socrates-bust-sculpture.webp';
+import socratesImage from '../assets/Socrates_real.png';
 
 // Add these simple page components
 const DocumentsPage = () => (
@@ -17,12 +17,101 @@ const ResourcesPage = () => (
   </div>
 );
 
-const SettingsPage = () => (
-  <div className="p-6">
-    <h2 className="text-2xl font-semibold mb-4">Settings</h2>
-    <p>Settings and configuration options will be available here.</p>
-  </div>
-);
+const SettingsPage = () => {
+  const [systemPrompt, setSystemPrompt] = useState('');
+  const [isEditing, setIsEditing] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    // Fetch current system prompt
+    const fetchPrompt = async () => {
+      try {
+        const response = await fetch(`${API_URL}/api/system-prompt`);
+        const data = await response.json();
+        setSystemPrompt(data.prompt);
+      } catch (err) {
+        setError('Failed to load system prompt');
+      }
+    };
+    fetchPrompt();
+  }, []);
+
+  const handleSavePrompt = async () => {
+    setIsSaving(true);
+    setError('');
+    try {
+      const response = await fetch(`${API_URL}/api/system-prompt`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ prompt: systemPrompt })
+      });
+      if (!response.ok) throw new Error('Failed to save');
+      setIsEditing(false);
+    } catch (err) {
+      setError('Failed to save system prompt');
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  return (
+    <div className="p-6 max-w-4xl mx-auto">
+      <h2 className="text-2xl font-semibold mb-4">Settings</h2>
+      
+      <div className="bg-white rounded-lg shadow p-6">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-lg font-medium">System Prompt</h3>
+          {!isEditing ? (
+            <button
+              onClick={() => setIsEditing(true)}
+              className="px-4 py-2 text-sm bg-blue-50 text-blue-600 rounded-md hover:bg-blue-100"
+            >
+              Edit Prompt
+            </button>
+          ) : (
+            <div className="space-x-2">
+              <button
+                onClick={handleSavePrompt}
+                disabled={isSaving}
+                className="px-4 py-2 text-sm bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:opacity-50"
+              >
+                {isSaving ? 'Saving...' : 'Save'}
+              </button>
+              <button
+                onClick={() => setIsEditing(false)}
+                className="px-4 py-2 text-sm bg-gray-50 text-gray-600 rounded-md hover:bg-gray-100"
+              >
+                Cancel
+              </button>
+            </div>
+          )}
+        </div>
+
+        {error && (
+          <div className="mb-4 p-3 bg-red-50 text-red-600 rounded-md">
+            {error}
+          </div>
+        )}
+
+        {isEditing ? (
+          <textarea
+            value={systemPrompt}
+            onChange={(e) => setSystemPrompt(e.target.value)}
+            className="w-full h-64 p-3 border rounded-md font-mono text-sm"
+            placeholder="Enter the system prompt..."
+          />
+        ) : (
+          <pre className="w-full h-64 p-3 bg-gray-50 rounded-md overflow-auto font-mono text-sm">
+            {systemPrompt}
+          </pre>
+        )}
+      </div>
+    </div>
+  );
+};
 
 // Main chat content component
 const ChatContent = ({ messages, handleSubmit, inputMessage, setInputMessage, serverStatus }) => (
@@ -73,6 +162,8 @@ const ChatContent = ({ messages, handleSubmit, inputMessage, setInputMessage, se
   </>
 );
 
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5002';
+
 const SocratesChat = () => {
   const INITIAL_GREETING = "Greetings! I am Socrates. What question shall we explore together?";
 
@@ -96,7 +187,7 @@ const SocratesChat = () => {
   useEffect(() => {
     const checkBackend = async () => {
       try {
-        const response = await fetch('http://localhost:5002/api/hello');
+        const response = await fetch(`${API_URL}/api/hello`);
         setServerStatus(prev => ({
           ...prev,
           backend: response.ok
@@ -121,7 +212,7 @@ const SocratesChat = () => {
     setMessages(prev => [...prev, { role: 'user', content: inputMessage }]);
     
     try {
-      const response = await fetch('http://localhost:5002/api/ask', {
+      const response = await fetch(`${API_URL}/api/ask`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

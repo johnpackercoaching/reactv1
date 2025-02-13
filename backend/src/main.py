@@ -13,7 +13,10 @@ app = FastAPI()
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # React app address
+    allow_origins=[
+        "http://localhost:3000",  # Local development
+        "https://reactv1-chi.vercel.app",  # Vercel production URL
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -51,6 +54,18 @@ async def get_items() -> Dict[str, List[Item]]:
 @app.post("/api/ask")
 async def ask_question(question: Question) -> Dict[str, str]:
     return await ai_service.ask_question(question.text)
+
+@app.get("/api/system-prompt")
+async def get_system_prompt() -> Dict[str, str]:
+    return {"prompt": ai_service.get_system_prompt()}
+
+@app.post("/api/system-prompt")
+async def update_system_prompt(data: Dict[str, str]) -> Dict[str, str]:
+    new_prompt = data.get("prompt")
+    if not new_prompt:
+        raise HTTPException(status_code=400, message="Prompt is required")
+    ai_service.update_system_prompt(new_prompt)
+    return {"message": "Prompt updated successfully"}
 
 if __name__ == "__main__":
     import uvicorn

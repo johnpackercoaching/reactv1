@@ -40,4 +40,14 @@ async def create_embeddings(documents: List[str]) -> Dict[str, Any]:
         )
         return {"embeddings": embeddings}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e)) 
+        raise HTTPException(status_code=500, detail=str(e))
+
+# Add these functions to manage the system prompt
+def get_system_prompt() -> str:
+    # Return the current system prompt
+    return SYSTEM_PROMPT
+
+def update_system_prompt(new_prompt: str) -> None:
+    # Update the system prompt
+    global SYSTEM_PROMPT
+    SYSTEM_PROMPT = new_prompt 
