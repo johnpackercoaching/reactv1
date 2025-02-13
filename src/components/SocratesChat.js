@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MessageCircle, Home, Settings, Users, Mail, ScrollText, FileText, RefreshCw } from 'lucide-react';
 import socratesImage from '../assets/Socrates_real.png';
+import cerebroLogo from '../assets/cerebro_logo.png';
 
 // Add these simple page components
 const DocumentsPage = () => (
@@ -284,7 +285,15 @@ const SocratesChat = () => {
       {/* Sidebar - updated to match image */}
       <div className="w-64 bg-white border-r border-gray-200">
         <div className="p-4">
-          <h1 className="text-2xl font-semibold text-gray-900">Cerebro</h1>
+          <div className="flex items-center gap-2">
+            <img 
+              src={cerebroLogo} 
+              alt="Cerebro Logo" 
+              className="w-8 h-8"
+              style={{ objectFit: 'contain' }}
+            />
+            <h1 className="text-2xl font-semibold text-gray-900">Cerebro</h1>
+          </div>
           
           {/* Server Status - styled to match image */}
           <div className="mt-6">
